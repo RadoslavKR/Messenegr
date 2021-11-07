@@ -1,0 +1,20 @@
+<ion-content>
+  <ion-grid style="height: 100%;">
+    <ion-row style="display: flex; align-items: center; justify-content: center; height: 95%;">
+      <ion-col size="12">
+        <div class="ion-text-center">
+          <ion-text style="font-size: 0.7cm;">Messenger</ion-text>
+        </div>
+        <form [formGroup]="loginForm" (submit)="login()">
+          <ion-item>
+            <ion-input type="email" placeholder="Enter email" formControlName="email" required></ion-input>
+          </ion-item>
+          <ion-item style="top: 0.2cm;">
+            <ion-input placeholder="Password" type="password" formControlName="password" required></ion-input>
+          </ion-item>
+          <ion-button expend="block" style="width: 100%; margin-top: 0.45cm;" type="submit" [disabled]="!loginForm.valid">Log in</ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
