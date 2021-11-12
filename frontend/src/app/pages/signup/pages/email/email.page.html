@@ -1,0 +1,13 @@
+<ion-content>
+  <ion-title class="ion-text-center" style="margin-top: 10%; font-size: 30px;">Choose email</ion-title>
+  <ion-grid style="width: 97%;">
+    <ion-col size="12" >
+      <form [formGroup]="signUpForm" (submit)="next()">
+        <ion-item>
+          <ion-input type="email" placeholder="E-mail" formControlName="email" required></ion-input>
+        </ion-item>
+        <ion-button expand="block" style="margin-top: 2%;" type="submit" [disabled]="!signUpForm.valid">Next</ion-button>
+      </form>
+    </ion-col>
+  </ion-grid>
+</ion-content>

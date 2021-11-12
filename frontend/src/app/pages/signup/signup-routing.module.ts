@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: SignupPage
+  },
+  {
+    path: 'email',
+    loadChildren: () => import('./pages/email/email.module').then( m => m.EmailPageModule)
+  },
+  {
+    path: 'phone',
+    loadChildren: () => import('./pages/phone/phone.module').then( m => m.PhonePageModule)
   }
 ];
 

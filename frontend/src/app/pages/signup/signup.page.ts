@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { userData } from 'src/environments/environment';
 import { NgControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +12,7 @@ import { NgControl } from '@angular/forms';
 export class SignupPage implements OnInit {
   private signUpForm: any;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.signUpForm = new FormGroup({
@@ -19,8 +20,10 @@ export class SignupPage implements OnInit {
     })
   }
 
-  next() {
-    console.log(this.signUpForm.controls.username.value);
+  async next() {
+    userData.username = this.signUpForm.controls.username.value;
+    console.log(userData);
+    this.router.navigate(['signup/email']);
   }
 
 }
