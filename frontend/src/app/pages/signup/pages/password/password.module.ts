@@ -5,19 +5,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PhonePageRoutingModule } from './phone-routing.module';
+import { PasswordPageRoutingModule } from './password-routing.module';
 
-import { PhonePage } from './phone.page';
-
+import { PasswordPage } from './password.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PhonePageRoutingModule,
+    PasswordPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [PhonePage]
+  declarations: [PasswordPage]
 })
-export class PhonePageModule {}
+export class PasswordPageModule {}

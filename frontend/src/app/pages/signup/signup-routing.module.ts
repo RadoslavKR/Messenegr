@@ -15,7 +15,15 @@ const routes: Routes = [
   {
     path: 'phone',
     loadChildren: () => import('./pages/phone/phone.module').then( m => m.PhonePageModule)
+  },  {
+    path: 'password',
+    loadChildren: () => import('./pages/password/password.module').then( m => m.PasswordPageModule)
+  },
+  {
+    path: 'avatar',
+    loadChildren: () => import('./pages/avatar/avatar.module').then( m => m.AvatarPageModule)
   }
+
 ];
 
 @NgModule({

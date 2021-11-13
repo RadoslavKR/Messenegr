@@ -15,7 +15,7 @@ export class EmailPage implements OnInit {
 
   ngOnInit() {
     this.signUpForm = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.email])
+      email: new FormControl('', [Validators.required, Validators.pattern(/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/)])
     });
   }
 

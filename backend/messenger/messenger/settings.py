@@ -76,7 +76,11 @@ WSGI_APPLICATION = 'messenger.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'Messenger',
+        'USER':'root',  
+        'PASSWORD':'1234',  
+        'HOST':'localhost',  
+        'PORT':'3306'  
     }
 }
 

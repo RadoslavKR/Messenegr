@@ -1,0 +1,4 @@
+npm install @ionic/storage-angular
+npm install cordova-plugin-telerik-imagepicker
+npm install @ionic-native/image-picker
+ionic cap sync
