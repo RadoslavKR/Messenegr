@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app'
 ]
 
 MIDDLEWARE = [
@@ -75,7 +76,7 @@ WSGI_APPLICATION = 'messenger.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Messenger',
         'USER':'root',  
         'PASSWORD':'1234',  
@@ -83,6 +84,8 @@ DATABASES = {
         'PORT':'3306'  
     }
 }
+
+APPEND_SLASH=False
 
 
 # Password validation

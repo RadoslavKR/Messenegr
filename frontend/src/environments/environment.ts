@@ -8,11 +8,11 @@ export const environment = {
 
 
 export let userData = {
-  username: "",
-  email: "",
-  phone: "",
-  password: "",
-  image: ""
+  "username": "",
+  "email": "",
+  "phone": "",
+  "password": "",
+  "image": ""
 };
 
 /*

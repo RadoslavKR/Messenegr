@@ -5,6 +5,7 @@ import { ImagePicker } from '@ionic-native/image-picker';
 
 import { userData } from 'src/environments/environment';
 import { StorageService } from 'src/app/services/storage/storage.service';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-avatar',
@@ -13,7 +14,7 @@ import { StorageService } from 'src/app/services/storage/storage.service';
 })
 export class AvatarPage implements OnInit {
 
-  constructor(private router: Router, private storageService: StorageService) { }
+  constructor(private router: Router, private storageService: StorageService, private userService: UserService) { }
 
   ngOnInit() {
   }
@@ -29,6 +30,7 @@ export class AvatarPage implements OnInit {
 
   async next() {
     await this.storageService.set('user', userData);
+    this.userService.addUser(userData).subscribe();
     this.router.navigate(['']);
   }
 
