@@ -13,7 +13,7 @@ import { AvatarPage } from './avatar.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    AvatarPageRoutingModule
+    AvatarPageRoutingModule,
   ],
   declarations: [AvatarPage]
 })

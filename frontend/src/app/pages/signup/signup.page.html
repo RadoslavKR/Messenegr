@@ -6,6 +6,12 @@
         <ion-item>
           <ion-input type="text" placeholder="Username" formControlName="username" required></ion-input>
         </ion-item>
+        <ion-list *ngIf="!check">
+          <ion-item>
+            <ion-icon name="close" color="danger"></ion-icon>
+            <ion-label>Username already exists!</ion-label>
+          </ion-item>
+        </ion-list>
         <ion-button expand="block" style="margin-top: 2%;" type="submit" [disabled]="!signUpForm.valid">Next</ion-button>
       </form>
     </ion-col>

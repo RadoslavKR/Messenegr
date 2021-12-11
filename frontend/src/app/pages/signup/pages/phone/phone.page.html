@@ -4,8 +4,14 @@
     <ion-col size="12" >
       <form [formGroup]="signUpForm" (submit)="next()">
         <ion-item>
-          <ion-input type="number" placeholder="Phone" formControlName="phone"></ion-input>
+          <ion-input type="text" placeholder="Phone" formControlName="phone"></ion-input>
         </ion-item>
+        <ion-list *ngIf="!check">
+          <ion-item>
+            <ion-icon name="close" color="danger"></ion-icon>
+            <ion-label>This phone is being used by another user!</ion-label>
+          </ion-item>
+        </ion-list>
         <ion-button expand="block" style="margin-top: 2%;" type="submit" [disabled]="!signUpForm.valid">Next</ion-button>
       </form>
     </ion-col>
